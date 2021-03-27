@@ -1,0 +1,183 @@
+/* se resetea el margin y padding que el navegador da por defecto a la etiqueta body. Aplica estilos a todo el body. */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* se quita globalmente las lineas de la etiqueta de ancla, ya que se usarán más etiquetas de ancla y no se necesita que ninguna de las que se va a usar las tenga */
+a {
+    text-decoration: none;
+    cursor: pointer; /* cuando se esté en la etiqueta ancla saldrá una manito */
+}
+
+/* Se asume que el width del header ocupa el 100% de la pantalla, lo hace flexible, si el width varía nuestra etiqueta de width también */
+header {
+    width: 100%;
+    height: 60px;
+}
+
+/* El html semántico ayuda a ser más específicos. Se edita una etiqueta nav que está dentro de una etiqueda header, asegura que no hay otra etiqueta nav dentro de una etiqueta header a la que se le agreguen estos estilos */
+header nav {
+    display: flex; 
+    justify-content: flex-end; /* justificar el contenido a los extremos o en el centro, posicionando la caja nav al extremo */
+}
+
+/* Se toma 100% el elemento ul para que nos ayude a posicionar su contenido que son los list items*/
+header nav .nav-right-section {
+width: 250px;
+height: auto; /* como el padre ya tiene una altura y esta sección no pude ser más alta que su padre, se le dirá que tome de forma automática la atura del padre */
+display: flex;
+list-style: none; /* los list items tienen un bullet por default, decimos que quite los estilos que tienen los elementos de esa lsta */
+justify-content: center; /* justificar el contenido dentro de la lista no ordenada hacia el centro, ya que el contenido se queda solo a la derecha */
+align-items: center;
+}
+
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #000000;
+}
+
+nav .nav-right-section a:hover {
+    text-decoration: underline solid black;
+   }
+
+nav .nav-right-section .menu-icon {
+    background-image: url("https://static.thenounproject.com/png/756729-200.png");
+    background-repeat: no-repeat; /* cuando la imagen es muy pequeña, la imagen suele repetirse para llenar el espacio */
+    background-position: center;
+    background-size: contain; /* para que se aproxime al tamaño del contenedor */
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img {
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* En esta sección se usará display-layout */
+main {
+    text-align: center;
+}
+
+main .main-logo {
+    width: 272px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-logo img {
+    width: 272px;
+    height: 92px;
+}
+
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;;
+}
+
+main .main-input-container {
+    width: 570px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input {
+    width: 480px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border: #dfe1e500;
+}
+
+main .main-input .search-icon {
+    background-image: url("https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+main .main-input .micro-icon {
+    background-image: url("https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div {
+    display: inline-block;
+}
+
+main .main-buttons button {
+    height: 36px;
+    background-color: #f8f9fa;
+    border: 0;
+    font-size: 14px;
+    color: #3c4043;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 10px;
+}
+
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #00001673;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul {
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+footer .footer-left {
+    justify-content: left;
+}
+
+footer .footer-right {
+    justify-content: right;
+}
+
+footer ul li a {
+    margin: 10px;
+    color: #5f6368;
+}
+
+footer ul li a:hover {
+    text-decoration: underline solid #5f6368;
+}
+
